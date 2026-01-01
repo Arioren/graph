@@ -4,9 +4,9 @@
 #include <algorithm>
 #include <string>
 #include <list>
-#include "Stage1/Graph.h"
-#include "Stage1/UserData.h"
-#include "Stage1/BfsRunner.h"
+#include "Graph.h"
+#include "UserData.h"
+#include "BfsRunner.h"
 
 class SocialNetworkAnalyzer {
 public:

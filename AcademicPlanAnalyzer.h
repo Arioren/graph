@@ -4,10 +4,10 @@
 #include <iostream>
 #include <algorithm>
 #include <map>
-#include "Stage1/Graph.h"
-#include "Stage1/DfsResult.h"
-#include "Stage1/DfsRunner.h"
-#include "Stage1/CourseData.h"
+#include "Graph.h"
+#include "DfsResult.h"
+#include "DfsRunner.h"
+#include "CourseData.h"
 
 class AcademicPlanAnalyzer {
 public:
