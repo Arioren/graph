@@ -20,12 +20,10 @@ public:
     bool hasCycle() const { return back_ > 0; }
 
     void onFinish(Vertex<K, T>* v) {
-        // TBD: complete
         topo_.push_front(v);
     }
 
     std::list<Vertex<K, T>*> topologicalOrderOrEmpty() const {
-        // TBD: complete
         if (hasCycle()) return std::list<Vertex<K, T>*>();
         return topo_;
     }
