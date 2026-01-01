@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
-#include "Graph.h"
-#include "DfsResult.h"
-#include "CourseData.h"
+#include "Stage1/Graph.h"
+#include "Stage1/DfsResult.h"
+#include "Stage1/CourseData.h"
 
 class AcademicPlanAnalyzer {
 public:
