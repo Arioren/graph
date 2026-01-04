@@ -30,10 +30,8 @@ public:
         for (int i = 0; i < m; ++i) {
             int id1, id2;
             file >> id1 >> id2;
-            try {
-                g_.addEdgeByKey(id1, id2);
-                g_.addEdgeByKey(id2, id1);
-            } catch (...) {}
+            g_.addEdgeByKey(id1, id2);
+            g_.addEdgeByKey(id2, id1);
         }
     }
 
@@ -93,7 +91,7 @@ public:
                 maxDist = d;
                 remoteId = v->getKey();
             } else if (d == maxDist && remoteId == -1) {
-                remoteId = v->getKey(); // Should not happen with maxDist = -1 initial
+                remoteId = v->getKey();
             }
         }
         return remoteId;

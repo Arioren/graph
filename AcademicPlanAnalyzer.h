@@ -29,16 +29,17 @@ public:
         for (int i = 0; i < m; ++i) {
             std::string prereq, course;
             file >> prereq >> course;
-            try {
-                g_.addEdgeByKey(prereq, course);
-            } catch (...) {}
+            g_.addEdgeByKey(prereq, course);
         }
     }
 
     ~AcademicPlanAnalyzer() = default;
 
     bool hasCycle() {
-        runDfsIfNeeded();
+        if (!hasDfs_) {
+            dfsResult_ = DfsRunner::DFS(g_);
+            hasDfs_ = true;
+        }
         return dfsResult_.hasCycle();
     }
 
@@ -67,13 +68,6 @@ public:
     }
 
 private:
-    void runDfsIfNeeded() {
-        if (!hasDfs_) {
-            dfsResult_ = DfsRunner::DFS(g_);
-            hasDfs_ = true;
-        }
-    }
-
     Graph<std::string, CourseData> g_;
     bool hasDfs_ = false;
     DfsResult<std::string, CourseData> dfsResult_;

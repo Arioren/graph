@@ -28,8 +28,6 @@ public:
             }
         }
 
-        for (int i = 0; i < treeCount; ++i) res.incTree();
-
         std::cout << "DFS completed, found " << treeCount << " trees, "
                   << res.treeEdges() << " tree edges, "
                   << res.backEdges() << " back edges, "
